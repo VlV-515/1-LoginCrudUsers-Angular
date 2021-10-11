@@ -1,6 +1,6 @@
 # Login - CRUD
 
-_Pequeña aplicacion que consta de un login con autenticacion JWT, con doble vista, la vista del 'admin' que le permite controlar todo un CRUD de usuarios, y la vista de 'user' que puede ser personalizable 100%._
+_Pequeña aplicacion creada con el framework Angular, que consta de un login con autenticacion JWT, con doble vista, la vista del 'admin' que le permite controlar todo un CRUD de usuarios, y la vista de 'user' que puede ser personalizable 100%._
 
 ## Comenzando 🚀
 
@@ -11,7 +11,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 _Necesitaremos de una api para este proyecto, la cual podras encontrar en el siguiente enlace._
 
 ```
-https://enlace.com
+https://github.com/VlV-515/1-LoginCrudUsers-API
 ```
 
 _Angular requiere una versión LTS activa o LTS en mantenimiento de Node.js._
@@ -30,7 +30,7 @@ _pero puedes utilizar cualquiera._
 
 ### Instalación del proyecto🔧
 
-_Una vez clonado este repositorio, se deben instalar las dependencias para que se ejecute, asi que dentro de la carpeta del proyecto, ejecutaremos los siguientes comandos en terminal_
+_Una vez clonado este repositorio, se deben instalar las dependencias para que se ejecute, asi que, dentro de la carpeta este proyecto, ejecutaremos los siguientes comandos en terminal_
 
 ```
 npm install
