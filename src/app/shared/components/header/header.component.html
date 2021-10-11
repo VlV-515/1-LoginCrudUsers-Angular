@@ -1,0 +1,22 @@
+<nav class="navbar navbar-dark bg-dark text-white align-middle">
+    <div class="d-inline-flex p-2 bd-highlight ms-2" routerLink="/home">
+        <i class="bi bi-door-open"></i> &nbsp; Login CRUD &nbsp; <i class="bi bi-menu-button-wide-fill"></i>
+    </div>
+    <div class="d-flex justify-content-end">
+        <div *ngIf="isLogin" class="d-inline-flex p-2 bd-highlight">
+            <i class="bi bi-people"> Welcome {{userName}}</i>
+        </div>
+        <div class="btn-group me-2" role="group" aria-label="">
+            <ng-container *ngIf="isLogin">
+                <button type="button" class="btn btn-danger mx-1" (click)="btnLogout()"><i
+                        class="bi bi-door-closed"></i>&nbsp;Logout</button>
+                <button type="button" class="btn btn-info ms-1 me-2" routerLink="/home"><i
+                        class="bi bi-house-door"></i>&nbsp;Home</button>
+            </ng-container>
+            <ng-container *ngIf="isAdmin">
+                <button type="button" class="btn btn-success" routerLink="/admin"><i
+                        class="bi bi-file-person"></i>&nbsp;Admin</button>
+            </ng-container>
+        </div>
+    </div>
+</nav>

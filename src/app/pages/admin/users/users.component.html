@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="mb-3">
+        <a class="btn btn-success" (click)="btnNewUser(modalUser)" role="button">
+            <i class="bi bi-person-plus"> New User</i>
+        </a>
+    </div>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Role</th>
+                <th>Create Data</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users; let lineNumber=index">
+                <td>{{user.id}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.role}}</td>
+                <td>{{user.createDate}}</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="">
+                        <button type="button" class="btn btn-warning me-2" (click)="btnEditUser(user,modalUser)"><i
+                                class="bi bi-pencil"></i> Edit</button>
+                        <button type="button" class="btn btn-danger" (click)="btnDeleteUser(user.id,lineNumber)"><i
+                                class="bi bi-trash"></i> Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Start-Modal User -->
+<ng-template #modalUser>
+    <app-form 
+    [titleForm]="titleModal"
+    [userData]="userData"
+    (dataForm)="saveChanges($event)"
+    ></app-form>
+</ng-template>
+<!-- End-Modal User -->
